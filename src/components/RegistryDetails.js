@@ -5,17 +5,11 @@ const fontStyle = {
     color: "rgb(180, 202, 205)"
 };
 
-export default class HotelDetails extends React.Component {
+export default class RegistryDetails extends React.Component {
     constructor(props) {
         super(props);
 
-        this.name = props.name;
-        this.phoneNumber = props.phoneNumber;
-        this.address = props.address;
-        this.website = props.website;
-        this.discountCode = props.discountCode;
-        this.password = props.password;
-        this.discountRate = props.discoun;
+      
     }
 
     bookNow() {
@@ -27,7 +21,7 @@ export default class HotelDetails extends React.Component {
                 target="_blank"
                 href={this.props.website}
             >
-                Book Now!
+                Go to Site!
             </Button>
         );
     }
@@ -35,8 +29,6 @@ export default class HotelDetails extends React.Component {
     render() {
         const {
             name,
-            phoneNumber,
-            address,
         } = this.props;
         return (
             <div
@@ -46,9 +38,8 @@ export default class HotelDetails extends React.Component {
             >
                 <br />
                 <h1 style={fontStyle}>
-                    {name} | {phoneNumber}
+                    {name} 
                 </h1>
-                <h2 style={fontStyle}>{address}</h2>
                 {this.bookNow()}
                 <hr />
             </div>
